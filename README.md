@@ -1,2 +1,2 @@
 # weather-app
-Get local weather forecasts for chosen location or coordinates for anywhere in the US.
+Get local weather forecasts for any location or coordinates anywhere in the US.
