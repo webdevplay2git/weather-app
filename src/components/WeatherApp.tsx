@@ -55,7 +55,7 @@ export function WeatherApp() {
   //const endTimeAdj = new Date();
   //console.log(time);
 
-  const formatTime = (time: string) => new Date();
+  const formatTime = (time: string) => new Date(time);
   //console.log(formatTime(forecast.startTime));
 
   /*const formatTime = (time: string) => {
@@ -74,6 +74,12 @@ export function WeatherApp() {
     testApi();
   };
 
+  const handleSetForecasts = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log(`setForecasts() ${forecasts}`);
+    setForecasts([]);
+  };
+
   const fetchWeather = async () => {
     console.log(`fetchWeather() ${forecastUrl}`);
     try {
@@ -85,7 +91,7 @@ export function WeatherApp() {
 
       const data = await response.json();
 
-      //console.log(data);
+      console.log(data);
       //setForecasts(data.properties.periods);
     } catch (error) {
       console.error(error);
@@ -134,6 +140,8 @@ export function WeatherApp() {
       console.error(error);
     }*/
   };
+
+  console.log(`formatTime(): ${formatTime(String(new Date().toLocaleString))}`);
 
   return (
     <section
@@ -189,6 +197,9 @@ export function WeatherApp() {
           Fetch Forecasts
         </button>
       </div>
+      <div></div>
+      <button onClick={handleFetchWeather}>Fetch Weather</button>
+      <button onClick={handleSetForecasts}>Set Forecasts</button>
     </section>
   );
 }

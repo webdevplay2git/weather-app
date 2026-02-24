@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import { WeatherApp } from "./components/WeatherApp";
 
 // Edwardsville, IL: Lat: 38.81, Long: -89.95
